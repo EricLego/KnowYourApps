@@ -1,0 +1,31 @@
+name: knowyourapps
+description: An app to track and analyze app usage patterns.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.5
+  sqflite: ^2.2.8
+  path: ^1.8.3
+  fl_chart: ^0.62.0
+  permission_handler: ^10.2.0
+  app_usage: ^2.1.1
+  shared_preferences: ^2.1.1
+  intl: ^0.18.1
+  device_info_plus: ^9.0.2
+  tflite_flutter: ^0.10.1
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/ml_models/
+    - assets/images/
