@@ -1,60 +1,105 @@
-# Mood Insights App - User Guide (Phase 1)
-Welcome to Mood Insights, your companion for understanding how your digital habits may influence your mood and well-being.
+# KnowYourApps - Digital Wellbeing Monitor
 
-## What Does the App Do?
-Mood Insights helps you:
+KnowYourApps is a cross-platform Flutter application that helps you understand how your app usage patterns may influence your mood and overall digital wellbeing.
 
-Track how much time you spend on your phone and which apps you use most.
+## Features
 
-Categorize your app usage (like social, productivity, or entertainment).
+### 🔍 App Usage Tracking
+- Track which apps you use and for how long
+- Automatic categorization of apps (Social, Productivity, Entertainment, etc.)
+- Daily, weekly, and monthly usage stats
 
-Analyze your interaction patterns (how often you switch apps, how actively you use them).
+### 📊 Interactive Visualizations 
+- App usage breakdown by category
+- Daily usage patterns
+- Mood trends over time
 
-Use smart AI to spot patterns and predict how your digital habits might be affecting your mood.
+### 🧠 Mood Analysis
+- AI-powered mood predictions based on your app usage
+- Rate your mood and provide feedback
+- Identification of apps with positive and negative impact
 
-## How It Works
-1. Screen Time & App Tracking
-The app automatically records how long you use your phone and each app.
+### 🏷️ Custom Categories
+- Create and customize app categories
+- Manual override for app categorization
+- Personalize your tracking experience
 
-It groups apps into categories (like Social, Productivity, Entertainment) so you can see where your time goes.
+## Tech Stack
 
-You can review your daily and weekly usage, and even adjust categories if something doesn’t feel right.
-
-2. Interaction Analysis
-We look at how you use your phone-such as how often you unlock it, switch apps, or actively type and scroll.
-
-This helps us understand not just what you use, but how you use it.
-
-3. Mood Prediction (AI-Powered)
-Our AI combines your app usage and interaction patterns to estimate how your habits might be linked to your mood.
-
-You’ll get simple mood insights and suggestions (for example, “Late-night social scrolling is linked to lower mood for you. Consider a digital wind-down!”).
+- **Frontend**: Flutter, Provider for state management
+- **Local Storage**: SQLite (sqflite)
+- **App Usage Tracking**: Native APIs (UsageStatsManager for Android, ScreenTime API for iOS)
+- **Visualization**: FL Chart
+- **ML**: TensorFlow Lite with on-device processing
 
 ## Privacy & Security
-Your data stays on your device by default-nothing is shared without your permission.
 
-You control what is tracked and can pause or delete your data anytime.
+- All data is stored locally on your device
+- No data is sent to remote servers
+- You have complete control over your data
+- Can export or delete all data at any time
 
-We do not sell or share your personal information.
+## Requirements
+
+- **Android**: Version 7.0 (API level 24) or higher
+- **iOS**: iOS 13 or higher
+- **Permissions**: App usage stats permission (will be requested at startup)
 
 ## Getting Started
-Install the app and follow the setup prompts.
 
-Allow permissions for screen time and app usage tracking (we’ll guide you).
+### Installation
 
-Check your dashboard after a day or two for your first insights.
+1. Download the app from the App Store or Google Play Store
+2. Launch the app and follow the onboarding process
+3. Grant necessary permissions when prompted
+4. Start tracking your app usage and mood
 
-Adjust app categories if needed for more personalized results.
+### First Steps
 
-## FAQs
-Q: Does the app record what I do inside apps?
-A: No. We only track which apps you use and for how long-not your messages, photos, or private content.
+1. Allow 1-2 days for the app to collect usage data
+2. Rate your mood regularly for better insights
+3. Check the Insights tab to see patterns emerging
+4. Customize categories if needed in the Categories tab
 
-Q: Can I turn off tracking?
-A: Yes! You can pause tracking or delete your data anytime from the settings.
+## Development
 
-Q: Is my data secure?
-A: Absolutely. All your data is encrypted and stored safely on your device.
+### Building from Source
 
-Support
-If you have questions or feedback, reach out to our support team through the app or at my email
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/knowyourapps.git
+
+# Navigate to the project folder
+cd knowyourapps
+
+# Get dependencies
+flutter pub get
+
+# Run in debug mode
+flutter run
+```
+
+### Project Structure
+
+```
+lib/
+├── models/       # Data models
+├── views/        # UI components
+│   ├── screens/  # Full screens
+│   └── widgets/  # Reusable UI components
+├── controllers/  # State management
+├── services/     # Business logic
+└── main.dart     # Entry point
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+If you have questions or feedback, please create an issue on our GitHub repository or contact us at support@knowyourapps.com
